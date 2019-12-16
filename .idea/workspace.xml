@@ -16,6 +16,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1V2ppnEdWDFcTJe4P7XfidBA0LH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../.pyenv/versions/3.5.3/bin" />
@@ -43,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576461229388</updated>
-      <workItem from="1576461231036" duration="1522000" />
+      <workItem from="1576461231036" duration="1789000" />
     </task>
     <servers />
   </component>
