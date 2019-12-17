@@ -29,7 +29,10 @@ class RegexConverter(BaseConverter):
         self.regex = regex  #
 
     def to_python(self, value):
-        pass
+        print("to_python方法被调用")
+        # return "abc"
+        # value是在路径进行正则表达式匹配的时候提取的参数
+        return value
 
     def to_url(self, value):
         """url_for 的方法的时候被调用"""
@@ -49,10 +52,16 @@ app.url_map.converters['re'] = RegexConverter  # 以键值方式保存，不加�
 app.url_map.converters['mobile'] = MobileConverter  # 以键值方式保存，不加括号不是创建对象，只是添加类
 
 
-@app.route('/send/<re(r"1[3456789]\d{9}"):mobile_num>')
+@app.route(r'/send/<re(r"1[3456789]\d{9}"):mobile_num>')
 # @app.route('/send/<mobile:mobile_num>')
 def send_sms(mobile_num):
     return 'page from send_sms  mobile is %s' % mobile_num
+
+
+@app.route("/index")
+def index():
+    url = url_for("send_sms", mobile_num='18621125997')
+    return redirect(url)
 
 
 if __name__ == '__main__':
